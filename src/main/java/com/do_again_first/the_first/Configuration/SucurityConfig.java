@@ -17,7 +17,7 @@ import javax.crypto.spec.SecretKeySpec;
 @EnableWebSecurity
 public class SucurityConfig {
     private final String[] PUBLIC_ENDPOINTS = {"/register",
-            "/auth/login", "auth/introspect"};
+            "/auth/login"};
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request ->

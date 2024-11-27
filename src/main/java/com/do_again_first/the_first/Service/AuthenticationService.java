@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -32,8 +33,11 @@ public class AuthenticationService {
     UserRepository userRepository;
 
     @NonFinal
-    protected final String SIGNER_KEY =
-            "CToznypd0FhBmPd0IcWRWV++GH+FqX696ro47FL1WSR48Lc2bwtbRN7/RFCZ/6rH";
+//    protected final String SIGNER_KEY =
+//            "CToznypd0FhBmPd0IcWRWV++GH+FqX696ro47FL1WSR48Lc2bwtbRN7/RFCZ/6rH";
+    @Value("${jwt.secret}")
+    private String SIGNER_KEY;
+
 
 
 
