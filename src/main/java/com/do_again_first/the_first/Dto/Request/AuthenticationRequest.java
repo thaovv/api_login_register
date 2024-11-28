@@ -3,12 +3,28 @@ package com.do_again_first.the_first.Dto.Request;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-@Data
-@Builder
+
+
 @AllArgsConstructor
 @NoArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+
 public class AuthenticationRequest {
-    String username;
-    String password;
+    private String username;
+    private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

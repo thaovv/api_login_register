@@ -1,7 +1,6 @@
 package com.do_again_first.the_first.Service;
 
 import com.do_again_first.the_first.Dto.Request.UserCreationRequest;
-import com.do_again_first.the_first.Dto.Response.UserResponse;
 import com.do_again_first.the_first.Entities.User;
 import com.do_again_first.the_first.Exception.AppException;
 import com.do_again_first.the_first.Exception.ErrorCode;
@@ -13,8 +12,6 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor

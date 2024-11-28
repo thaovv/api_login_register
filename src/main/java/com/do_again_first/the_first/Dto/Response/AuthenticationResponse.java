@@ -3,12 +3,28 @@ package com.do_again_first.the_first.Dto.Response;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-@Data
+
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@FieldDefaults(level = AccessLevel.PRIVATE)
+
 public class AuthenticationResponse {
-    String token;
-    boolean authenticated;
+    private String token;
+    private boolean authenticated;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public boolean isAuthenticated() {
+        return authenticated;
+    }
+
+    public void setAuthenticated(boolean authenticated) {
+        this.authenticated = authenticated;
+    }
 }
